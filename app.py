@@ -1,3 +1,14 @@
+import subprocess
+import sys
+
+# Gerekli kütüphaneleri yükleme
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Kütüphaneleri yükleyin
+install("matplotlib")
+install("pandas")
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
